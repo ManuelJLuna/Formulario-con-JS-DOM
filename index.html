@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Proyecto formulario</title>
+</head>
+
+<body>
+
+    <div id="registroForm">
+
+        <h2>Formulario de registro</h2>
+
+        <form id="formulario" novalidate autocomplete="off">
+            <label for="name">Nombre:</label>
+            <input type="text" class="text" name="name" id="name" minlength="3" required>
+            <br>
+            <span class="error" id="errorName"></span>
+            <br>
+            <label for="lastName">Apellido:</label>
+            <input type="text" class="text" name="lastName" id="lastName" minlength="3" required>
+            <br>
+            <span class="error" id="errorLastName"></span>
+            <br>
+            <label for="document">Documento:</label>
+            <input type="text" class="text" name="document" id="document" minlength="5" required>
+            <br>
+            <span class="error" id="errorDocument"></span>
+            <br>
+            <label for="email">Correo electronico:</label>
+            <input type="email" class="text" name="email" id="email" required autocomplete="on">
+            <br>
+            <span class="error" id="errorEmail"></span>
+            <br>
+            <label for="age">Edad:</label>
+            <input type="number" class="text" name="age" id="age" min="5" max="100" required>
+            <br>
+            <span class="error" id="errorAge"></span>
+            <br>
+            <label for="ocupation">Ocupacion:</label>
+            <select name="ocupation" id="ocupation" required>
+                <option value="" disabled selected>Seleccione una opcion</option>
+                <option value="estudiante">Estudiante</option>
+                <option value="cientifico">Cientifico</option>
+                <option value="docente">Docente</option>
+                <option value="ingeniero">Ingeniero</option>
+                <option value="ingenieroInfromatico">Ingeniero Informatico</option>
+                <option value="medico">Medico</option>
+                <option value="otro">Otro</option>
+            </select>
+            <br>
+            <span class="error" id="errorOcupation"></span>
+            <br>
+            <label for="studies">Nivel de estudios:</label>
+            <select name="studies" id="studies" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="inicial">Inicial</option>
+                <option value="primario">Primario</option>
+                <option value="secundario">Secundario</option>
+                <option value="terciario">Terciario</option>
+                <option value="universitarioProgreso">Universitario en progreso</option>
+                <option value="universitario">Universitario</option>
+            </select>
+            <br>
+            <span class="error" id="errorStudies"></span>
+            <br>
+            <label class="inline" for="termsAndConditions">Acepto los terminos y condiciones</label>
+            <input type="checkbox" name="terminosYcondiciones" id="termsAndConditions" required>
+            <br>
+            <span class="error" id="errorTermsAndConditions"></span>
+            <br>
+            <h4>Acepto que me envien al mail</h4>
+            <label class="inline" for="publicidades">Publicidades</label>
+            <input type="checkbox" name="publicidades" id="publicidades">
+            <br>
+            <label class="inline" for="ofertas">Ofertas</label>
+            <input type="checkbox" name="ofertas" id="ofertas">
+            <br>
+            <label class="inline" for="novedades">Novedades</label>
+            <input type="checkbox" name="novedades" id="novedades">
+            <br>
+            <input type="submit" value="Registrarse">
+            <button id="clearForm" onclick="emptyForm()">Vaciar formulario</button>
+
+        </form>
+
+
+    </div>
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
